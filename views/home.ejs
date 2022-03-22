@@ -1,0 +1,16 @@
+
+<%- include('partials/header'); -%>
+
+  <h1><b>HOME</b></h1>
+  <p><%= content %></p> 
+
+  <% postAr.forEach(function(each){ %>
+    <h1><b><%= each["title"] %></b></h1>
+    <p style="display: inline;"><%= each["content"].substring(0, 100) %>...</p>
+    <a href="/posts/<%=each['title']%>">Read More</a>
+  <%})%>
+
+
+
+<%- include('partials/footer'); -%>
+
